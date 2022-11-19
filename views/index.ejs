@@ -3,6 +3,10 @@
     <%- include("./partials/head.ejs") %>
     <body>
         <h1>Pokedex!!</h1>
+        <% for(let i =0; i< allpokemon.length; i++) { %> 
         
+        <h3><a href="/pokemon/<%=i%>"><%=allpokemon[i].name %></a></h3>
+
+        <% } %> 
     </body>
 </html>

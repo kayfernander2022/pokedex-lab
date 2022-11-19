@@ -17,7 +17,7 @@ app.use("/static", express.static("public"));
 
 
 app.get('/pokemon',(req, res)=>{
-  res.render('index.ejs')
+  res.render('index.ejs',{allpokemon:Pokemon})
 })
 
 
