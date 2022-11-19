@@ -1,0 +1,9 @@
+<h1>You choose: <%= poke.name%></h1>
+<P>Description: <%= poke.description%></P>
+<img src="<%= poke.img%>" alt="<%= poke.name %>"/>
+<a href="/pokemon"><button>Back</button></a>
+
+<form action="/pokemon/<%= index %>?_method=DELETE" method="POST">
+
+  <button type="submit">Delete</button>
+</form> 

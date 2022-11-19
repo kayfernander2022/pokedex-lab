@@ -5,8 +5,8 @@
         <h1>Pokedex!!</h1>
         <% for(let i =0; i< allpokemon.length; i++) { %> 
         
-        <h3><a href="/pokemon/<%=i%>"><%=allpokemon[i].name %></a></h3>
-            <img src="<%= allpokemon[i].img%>" alt="allpokemon[i].name %>"/>
+        <a href="/pokemon/<%=i%>"><h3><%=allpokemon[i].name %> </h3>
+            <img src="<%= allpokemon[i].img%>" alt="<%= allpokemon[i].name %>"/>
         <% } %> 
     </body>
 </html>
