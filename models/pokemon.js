@@ -1,4 +1,4 @@
-let pokemon = [
+module.exports = [
   {
     id: "001",
     name: "Bulbasaur",
@@ -50958,4 +50958,3 @@ let pokemon = [
     }
   }
 ];
-module.exports = pokemon

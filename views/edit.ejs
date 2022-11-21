@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <%- include("./partials/head.ejs") %>
+    <body>
+        <h1>Edit a Pokemon</h1>
+          <h1>Update <%=Pokemon.name %></h1>
+
+          <form action="/pokemon/<%= index %>?_method=PUT" method="POST">
+            <div>
+              Name: <input type="text" name="name" value="<%= Pokemon.name %>"> <br>
+              Image: <input type="url" name="img" value="<%= Pokemon.img %>"><br>
+              Type: <input type="text" name="type" value="<%= Pokemon.type %>"><br>
+              <div>
+                Stats:<br>
+                <ul style="margin-left: 10px">
+                  <li>HP: <input type="number" name="hp" value="<%= Pokemon.stats.hp %>"></li>
+                  <li>Attack: <input type="number" name="attack" value="<%= Pokemon.stats.attack %>"></li>
+                  <li>Defense: <input type="number" name="defense" value="<%= Pokemon.stats.defense %>"></li>
+                  <li>SpAttack: <input type="number" name="spAttack" value="<%= Pokemon.stats.spattack %>"></li>
+                  <li>SpDefense: <input type="number" name="spDefense"value="<%= Pokemon.stats.spdefense %>"></li>
+                  <li>Speed: <input type="number" name="speed"value="<%= Pokemon.stats.speed %>"></li>
+                </ul>
+              </div>
+              
+              <input type="submit" value="Update Pokemon">
+            </div>
+        </form>
+      </body>
+  </html>

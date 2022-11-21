@@ -1,9 +1,28 @@
-<h1>You choose: <%= poke.name%></h1>
-<P>Description: <%= poke.description%></P>
+<h1><%= poke.name%></h1>
+
 <img src="<%= poke.img%>" alt="<%= poke.name %>"/>
-<a href="/pokemon"><button>Back</button></a>
 
-<form action="/pokemon/<%= index %>?_method=DELETE" method="POST">
+<a href="/pokemon"><button>Home</button></a>
 
-  <button type="submit">Delete</button>
-</form> 
+<div>
+  <div>
+    Type:
+      <ul>
+        <% poke.type.forEach(e => {%>
+          <li><%=e%></li>
+        <% });
+        %>
+      </ul>
+  </div>
+  <div>
+    Stats:
+      <ul> 
+        <li> HP: <%= poke.stats.hp%> </li>
+        <li> Attack: <%= poke.stats.attack%> </li>
+        <li> Defense: <%= poke.stats.defense%> </li>
+        <li> SpAttack: <%= poke.stats.spattack%> </li>
+        <li> SpDefense: <%= poke.stats.spdefense%> </li>
+        <li> Speed: <%= poke.stats.speed%> </li>
+      </ul>
+  </div>
+</div>

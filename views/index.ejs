@@ -2,11 +2,33 @@
 <html>
     <%- include("./partials/head.ejs") %>
     <body>
-        <h1>Pokedex!!</h1>
-        <% for(let i =0; i< allpokemon.length; i++) { %> 
-        
-        <a href="/pokemon/<%=i%>"><h3><%=allpokemon[i].name %> </h3>
-            <img src="<%= allpokemon[i].img%>" alt="<%= allpokemon[i].name %>"/>
-        <% } %> 
+        <h1>Pokedex</h1>
+        <nav>
+            <h3><a href="/pokemon/new">Add New Pokemon</a></h3>
+        </nav>
+        <div class="pokeContainer">
+            <% for(let i =0; i< allpokemon.length; i++) { %> 
+                <div class="pokemonCard">
+
+                    <div class="pokeName" style="background-color: green">
+                        <a href="/pokemon/<%=i%>">
+                            <h3><%=allpokemon[i].name %> </h3>
+                        </a>
+                    </div>
+                    
+                    <div class="pokeImage">
+                        <img style="height: 100px" src="<%= allpokemon[i].img%>" alt="<%= allpokemon[i].name %>"/>
+                    </div>
+                    
+                    <div class="pokeButtons" style="background-color: green">
+                        <a style="color: black; text-decoration: none;" href="/pokemon/<%=i%>/edit">Edit</a>
+                        <form action="/pokemon/<%= i %>?_method=DELETE" method="POST">
+                            <button style="background: none; border: none; margin: 0; padding: 0; cursor: pointer;" type="submit">Delete</button>
+                        </form>
+                    </div>
+                    
+                </div>
+            <% } %> 
+        </div>
     </body>
 </html>
