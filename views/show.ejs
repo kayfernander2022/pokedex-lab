@@ -1,12 +1,12 @@
 <%- include("./partials/head.ejs") %>
 <h1><%= poke.name%></h1>
-
+<div class="show">
 <img src="<%= poke.img%>" alt="<%= poke.name %>"/>
 
-<a href="/pokemon"><button>Home</button></a>
 
-<div>
-  <div>
+
+
+  <div class="showType">
     Type:
       <ul>
         <% poke.type.forEach(e => {%>
@@ -15,7 +15,7 @@
         %>
       </ul>
   </div>
-  <div> 
+  <div class="showStats"> 
     Stats:
       <ul> 
         <li> HP: <%= poke.stats.hp%> </li>
@@ -26,4 +26,6 @@
         <li> Speed: <%= poke.stats.speed%> </li>
       </ul>
   </div>
+  <a href="/pokemon"><button>Home</button></a>
+  
 </div>
