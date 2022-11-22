@@ -1,3 +1,63 @@
-h1{
-  color:red;
+*{
+  font-family: "Flexo-Medium",arial,sans-serif;
+}*
+
+html{
+  box-sizing: border-box;
 }
+
+h1{
+  display: flex;
+  justify-content: center;
+  color: orange;
+  font-family: "Flexo-Medium",arial,sans-serif;
+  text-shadow: 3px 3px gray;
+  font-size: 75px;
+
+
+}
+
+h3{
+  color: orange; 
+  text-shadow: 1px 1px gray;
+  text-align: center;
+  padding: 5px;
+
+}
+
+body{
+
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHql-o1h_cEYi8ZwpWOrkSImtraiaKSuC2kw&usqp=CAU);
+  background-attachment: fixed;
+}
+
+
+
+.pokeContainer{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+.pokemonCard{
+padding:5px;
+border-radius:8px;
+background-color: gray;
+margin: 5px;
+background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+}
+
+.pokeButtons{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 5px;
+  margin: 25px;
+  font-size:15px; 
+}
+.pokeImage{
+  display: flex;
+  justify-content: center;
+}
+
