@@ -71,6 +71,7 @@ body{
   flex-wrap: wrap;
   justify-content: center;
   
+  
 }
 
 .pokemonCard{
@@ -82,6 +83,7 @@ margin: 5px;
 background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 height: 245px;
 width: 175px;
+box-shadow: 3px 3px;
 }
 
 .pokeButtons{
