@@ -6,6 +6,17 @@ html{
   box-sizing: border-box;
 }
 
+#newPokeLink{
+  display: flex;
+  justify-content: center;
+  color: orange; 
+  text-shadow: 1px 1px gray;
+  height: auto;
+  width: 100%;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
 h1{
   display: flex;
   justify-content: center;
@@ -13,16 +24,24 @@ h1{
   font-family: "Flexo-Medium",arial,sans-serif;
   text-shadow: 3px 3px gray;
   font-size: 75px;
-
-
 }
 
 h3{
   color: orange; 
   text-shadow: 1px 1px gray;
   text-align: center;
-  padding: 5px;
+  height: auto;
+  width: 100%;
+  font-size: 16px;
+}
 
+#pokeNameText{
+  color: orange; 
+  text-shadow: 1px 1px gray;
+  text-align: center;
+  height: auto;
+  width: 100%;
+  font-size: 16px;
 }
 
 body{
@@ -32,7 +51,21 @@ body{
 }
 
 
+.pokeName{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  border-radius: 8px 8px 0 0;
+}
 
+#pokeNameLink{
+  display: flex;
+  justify-content: center;
+}
 .pokeContainer{
   display:flex;
   flex-wrap: wrap;
@@ -41,23 +74,46 @@ body{
 }
 
 .pokemonCard{
+position: relative;
 padding:5px;
 border-radius:8px;
 background-color: gray;
 margin: 5px;
 background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+height: 245px;
+width: 175px;
 }
 
 .pokeButtons{
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  padding: 5px;
-  margin: 25px;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 0 0 8px 8px;
+  height: 30px;
+  width: 100%;
+  padding: 0px;
+  margin-top: 25px;
   font-size:15px; 
 }
 .pokeImage{
   display: flex;
   justify-content: center;
+  margin-top: 45px;
+  border-radius: 8px;
 }
 
+#editLink{
+  justify-content: left;
+  margin-top: 5px;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+#deleteLink{
+  justify-content: right;
+  margin-top: 5px;
+  margin-right: 10px;
+  font-size: 16px;
+}

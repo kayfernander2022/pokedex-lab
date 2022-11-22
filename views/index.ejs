@@ -5,26 +5,30 @@
         <h1>Pokedex</h1>
         <body>
         <nav>
-            <h3><a href="/pokemon/new">Add New Pokemon</a></h3>
+            <a id="newPokeLink" href="/pokemon/new">Add New Pokemon</a>
         </nav>
         <div class="pokeContainer">
             <% for(let i =0; i< allpokemon.length; i++) { %> 
                 <div class="pokemonCard">
 
                     <div class="pokeName" style="background-color: green">
-                        <a href="/pokemon/<%=i%>">
-                            <h3><%=allpokemon[i].name %> </h3>
-                        </a>
+                        <div id="pokeNameLink">
+                            <a style="text-decoration: none; margin-top: 5px;" href="/pokemon/<%=i%>">
+                                <span id="pokeNameText"><%=allpokemon[i].name %></span>
+                            </a>
+                        </div>
                     </div>
                     
                     <div class="pokeImage">
-                        <img style="height: 100px" src="<%= allpokemon[i].img%>" alt="<%= allpokemon[i].name %>"/>
+                        <a href="/pokemon/<%=i%>">
+                        <img style="height: 160px; width:160px; border-radius: 8px;" src="<%= allpokemon[i].img%>" alt="<%= allpokemon[i].name %>">
+                        </a>
                     </div>
                     
                     <div class="pokeButtons" style="background-color: green">
-                        <a style="color: black; text-decoration: none;" href="/pokemon/<%=i%>/edit">Edit</a>
-                        <form action="/pokemon/<%= i %>?_method=DELETE" method="POST">
-                            <button style="background: none; border: none; margin: 0; padding: 0; cursor: pointer;" type="submit">Delete</button>
+                        <a id="editLink" style="color: black; text-decoration: none;" href="/pokemon/<%=i%>/edit">Edit</a>
+                        <form id="deleteLink" action="/pokemon/<%= i %>?_method=DELETE" method="POST">
+                            <button  style="background: none; border: none; margin: 0; padding: 0; cursor: pointer;" type="submit">Delete</button>
                         </form>
                     </div>
 
